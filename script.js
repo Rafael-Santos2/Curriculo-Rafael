@@ -79,23 +79,23 @@ let currentColor = document.documentElement.classList.contains('dark') ? '#fff' 
 function animateText(){
     if(isTyping){
         if(index < text.length){
-            titleElement.textContent = text.slice(0, index + 1);
+            titleElement.textContent = text.slice(0, index +1);
             index ++;
-        } else {
+        } else{
             isTyping = false;
         }
-    } else {
+    } else{
         if (index > 1){
-            titleElement.textContent = text.slice(0, index -1);
+            titleElement.textContent = text.slice(0, index-1);
             index --;
-        } else {
+        } else{
             isTyping = true;
-            // alterna a cor entre preto e laranja
-            currentColor = currentColor === (document.documentElement.classList.contains('dark') ? '#fff' : 'black') ? '#c94c16' : (document.documentElement.classList.contains('dark') ? '#fff' : 'black');
+            // Alterna a cor entre preto e laranja
+            currentColor = currentColor === (document.documentElement.classList.contains('light') ? 'black' : '#fff') ? '#c94c16' : (document.documentElement.classList.contains('light') ? 'black' : '#fff');
             titleElement.style.color = currentColor;
         }
     }
-    setTimeout(animateText, 150);
+    setTimeout(animateText, 300);
 }
 
 // inicia a animação quando carregar a página
