@@ -91,7 +91,7 @@ function animateText(){
         } else {
             isTyping = true;
             // alterna a cor entre preto e laranja
-            currentColor = currentColor === (document.documentElement.classList.contains('dark') ? '#fff' : 'black') ? '#543290' : (document.documentElement.classList.contains('dark') ? '#fff' : 'black');
+            currentColor = currentColor === (document.documentElement.classList.contains('dark') ? '#fff' : 'black') ? '#c94c16' : (document.documentElement.classList.contains('dark') ? '#fff' : 'black');
             titleElement.style.color = currentColor;
         }
     }
